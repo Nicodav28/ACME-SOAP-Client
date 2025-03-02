@@ -1,18 +1,18 @@
 
 
-# **ACME SOAP Client - Prueba Técnica** 🚀
+# **ACME SOAP Client - Prueba Técnica**
 
 Este proyecto es un cliente SOAP en **Spring Boot**, que recibe solicitudes en **JSON**, las transforma a **XML** y las envía a un servicio **SOAP** de la compañía ACME. Luego, recibe la respuesta en **XML**, la transforma de vuelta a **JSON** y la devuelve al cliente.
 
-## **📌 Características**
-✅ Implementación de **Spring Boot** para el servicio REST.  
-✅ Uso de **JAXB** para la conversión entre **JSON ↔ XML**.  
-✅ Simulación de respuestas SOAP en ausencia de un endpoint real.  
-✅ Contenerización con **Docker**.
+## **Características**
+- Implementación de **Spring Boot** para el servicio REST.  
+- Uso de **JAXB** para la conversión entre **JSON ↔ XML**.  
+- Simulación de respuestas SOAP en ausencia de un endpoint real.  
+- Contenerización con **Docker**.
 
 ---
 
-## **📂 Estructura del Proyecto**
+## **Estructura del Proyecto**
 ```
 acme-soap-client/
 │── src/
@@ -35,7 +35,7 @@ acme-soap-client/
 
 ---
 
-## **🚀 Requisitos**
+## **Requisitos**
 Antes de ejecutar el proyecto, asegúrate de tener instalado lo siguiente:
 
 - **JDK 23**
@@ -44,14 +44,14 @@ Antes de ejecutar el proyecto, asegúrate de tener instalado lo siguiente:
 
 ---
 
-## **⚙️ Configuración y Ejecución Local**
-### **1️⃣ Clonar el Repositorio**
+## **Configuración y Ejecución Local**
+### **Clonar el Repositorio**
 ```sh
 git clone https://github.com/Nicodav28/ACME-SOAP-Client.git
 cd acme-soap-client
 ```
 
-### **2️⃣ Construir el Proyecto**
+### **Construir el Proyecto**
 Ejecuta el siguiente comando en la raíz del proyecto para compilarlo:
 
 ```sh
@@ -60,7 +60,7 @@ mvn clean package
 
 Esto generará un archivo **JAR** en `target/`.
 
-### **3️⃣ Ejecutar la Aplicación**
+### **Ejecutar la Aplicación**
 Ejecuta el siguiente comando para iniciar el servicio:
 
 ```sh
@@ -72,32 +72,45 @@ El servicio estará disponible en:
 
 ---
 
-## **🐳 Ejecución con Docker**
+## **Ejecución con Docker**
 Si prefieres usar **Docker**, sigue estos pasos:
 
-### **1️⃣ Construir la Imagen Docker**
+### **Construir la Imagen Docker**
 ```sh
 docker build -t acme-soap-client .
 ```
 
-### **2️⃣ Ejecutar el Contenedor**
+### **Ejecutar el Contenedor**
 ```sh
 docker run -p 8080:8080 acme-soap-client
 ```
 
-### **3️⃣ Verificar el Contenedor**
+### **Verificar el Contenedor**
 Para confirmar que está corriendo, usa:
 
 ```sh
 docker ps
 ```
+De esa manera el servicio estara expuesto en el puerto 8080.
+
+### Para tener en cuenta
+Si es de preferencia usar otro puerto, puede hacerse
+libremente, solo se debe reemplazar despues de los dos puntos
+el valor 8080 al puerto deseado, por ejemplo usando el puerto 8000:
+
+```sh
+docker run -p 8080:8000 acme-soap-client
+```
+El servicio estaría disponible en:  
+📌 **http://localhost:8000**
+
 
 ---
 
-## **🛠️ Endpoints**
-### **1️⃣ Enviar una Orden (POST)**
-📌 **URL:** `http://localhost:8080/api/orders`  
-📄 **Ejemplo de Request (JSON):**
+## **Endpoints**
+### **Enviar una Orden (POST)**
+ **URL:** `http://localhost:8080/api/orders`  
+ **Ejemplo de Request (JSON):**
 ```json
 {
   "enviarPedido": {
@@ -111,7 +124,7 @@ docker ps
 }
 ```
 
-📄 **Ejemplo de Respuesta (JSON):**
+**Ejemplo de Respuesta (JSON):**
 ```json
 {
   "enviarPedidoRespuesta": {
@@ -123,12 +136,12 @@ docker ps
 
 ---
 
-## **📜 Tecnologías Utilizadas**
-✅ **Spring Boot** - Framework principal  
-✅ **Spring Web Services** - Cliente SOAP  
-✅ **JAXB** - Conversión XML ↔ JSON  
-✅ **Maven** - Gestión de dependencias  
-✅ **Docker** - Contenerización
+## **Tecnologías Utilizadas**
+- **Spring Boot** - Framework principal  
+- **Spring Web Services** - Cliente SOAP  
+- **JAXB** - Conversión XML ↔ JSON  
+- **Maven** - Gestión de dependencias   
+- **Docker** - Contenerización
 
 ---
-🚀 ¡Gracias por revisar mi prueba técnica!
+¡Gracias por revisar mi prueba técnica!
