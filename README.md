@@ -95,11 +95,11 @@ De esa manera el servicio estara expuesto en el puerto 8080.
 
 ### Para tener en cuenta
 Si es de preferencia usar otro puerto, puede hacerse
-libremente, solo se debe reemplazar despues de los dos puntos
+libremente, solo se debe reemplazar antes de los dos puntos
 el valor 8080 al puerto deseado, por ejemplo usando el puerto 8000:
 
 ```sh
-docker run -p 8080:8000 acme-soap-client
+docker run -p 8000:8080 acme-soap-client
 ```
 El servicio estaría disponible en:  
 📌 **http://localhost:8000**
