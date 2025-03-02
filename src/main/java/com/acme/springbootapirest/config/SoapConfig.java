@@ -28,7 +28,7 @@ public class SoapConfig {
         WebServiceTemplate webServiceTemplate = new WebServiceTemplate();
         webServiceTemplate.setMarshaller(marshaller);
         webServiceTemplate.setUnmarshaller(marshaller);
-        webServiceTemplate.setDefaultUri("http://WSDLs/EnvioPedidos/EnvioPedidosAcme");
+        webServiceTemplate.setDefaultUri("https://run.mocky.io/v3/ae7d2dc6-6924-4b1f-a485-bdec2081740b");
         return webServiceTemplate;
     }
 }

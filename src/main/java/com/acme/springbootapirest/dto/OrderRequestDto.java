@@ -1,11 +1,11 @@
 package com.acme.springbootapirest.dto;
 
 import jakarta.validation.Valid;
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 public class OrderRequestDto {
     @NotNull
+    @Valid
     private ShipOrderDto enviarPedido;
 
     public ShipOrderDto getEnviarPedido() {
