@@ -114,9 +114,9 @@ docker ps
 📄 **Ejemplo de Respuesta (JSON):**
 ```json
 {
-  "shipmentResponse": {
-    "shippingId": "12345",
-    "shippingStatus": "Entregado exitosamente al cliente"
+  "enviarPedidoRespuesta": {
+    "codigoEnvio": "12345",
+    "estado": "Entregado exitosamente al cliente"
   }
 }
 ```
