@@ -1,0 +1,7 @@
+*.iml
+*.log
+.mvn/
+.git/
+.idea/
+Dockerfile
+docker-compose.yml
